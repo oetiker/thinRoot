@@ -28,11 +28,12 @@ sub startup {
     });
     my $r = $self->routes;
     my $root = $self->cfg->{dataRoot};
+    my $bootServer = $self->cfg->{bootServer};
     # Normal route to controller
     $r->get('ipxe.cfg' => sub ($c) {
         $c->render(text => <<CFG_END, format => 'txt' );
 #!ipxe
-set base http://froburg.oetiker.ch:3833
+set base $bootServer;
 # note the BOOT_IMAGE parameter is used to identify the location from where to get the rest of the configuration from
 kernel \${base}/bzImage BOOT_IMAGE=\${base}/bzImage console=tty2 kgdboc=tty2 noswap elevator=deadline consoleblank=120 quiet loglevel=0 vga=775
 boot
