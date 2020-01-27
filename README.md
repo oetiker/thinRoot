@@ -1,62 +1,162 @@
 <img src="buildroot-external/patches/psplash/thinroot/logo.png" width="250px" align="center">
 
-[![Current Release](https://img.shields.io/github/release/jens-maus/thinRoot.svg)](https://github.com/jens-maus/thinRoot/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/jens-maus/thinRoot/latest/total.svg)](https://github.com/jens-maus/thinRoot/releases/latest)
-[![Contributors](https://img.shields.io/github/contributors/jens-maus/thinRoot.svg)](https://github.com/jens-maus/thinRoot/graphs/contributors)
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/jens-maus/thinRoot.svg)](https://github.com/jens-maus/thinRoot/issues)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/jens-maus/thinRoot.svg)](https://github.com/jens-maus/thinRoot/issues)
-[![Commits since last release](https://img.shields.io/github/commits-since/jens-maus/thinRoot/latest.svg)](https://github.com/jens-maus/thinRoot/releases/latest)
-[![License](https://img.shields.io/github/license/jens-maus/thinRoot.svg)](https://github.com/jens-maus/thinRoot/blob/master/LICENSE)
-[![Donate](https://img.shields.io/badge/donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RAQSDY9YNZVCL)
-[![GitHub stars](https://img.shields.io/github/stars/jens-maus/thinRoot.svg?style=social&label=Star)](https://github.com/jens-maus/thinRoot/stargazers/)
+See https://github.com/jens-maus/thinRoot for the original. This is simply a
+fork with changes to make things work for OETIIKER+PARTNER
 
-_thinRoot_ is a buildroot (https://buildroot.org/) powered operating system environment to create lightweight user-defined kiosk systems for PXE bootable ThinClients (e.g. using intel NUC, RaspberryPi, etc.) to smoothly connect to server-based desktop environments using ThinLinc, RDP, VNC, etc....
+Some notes on how to use this thing
 
-## :cookie: Features
-* provides a lightweight kiosk system which after bootup provides a simple connection GUI with options to connect via [ThinLinc](http://www.cendio.se/), RDP (via [freerdp](http://www.freerdp.com)) and VNC to Linux and Windows Terminalservers
+## changing the kernel config
 
-## :fire: Limitations
-* ...
-
-## :computer: Requirements
-
-1. One of the following PXE capable/enabled ThinClient hardware:
-  * 8th Gen Intel NUC (Coffee Lake): [NUC8i3BEK/NUC8i3BEH](https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc8i3bek.html)
-  * 7th Gen Intel NUC (Kaby Lake): [NUC7i3BNK/NUC7i3BNH](https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc7i3bnk.html)
-  * 6th Gen Intel NUC (Skylake): [NUC6i3SYB/NUC6i5SYB](https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc6i3syk.html)
-  * 5th Gen Intel NUC (Broadwell): [NUC5i3RYB/NUC5i5RYB](http://www.intel.de/content/www/us/en/nuc/nuc-kit-nuc5i3ryk.html)
-  * 4th Gen Intel NUC (Haswell): [D34010WYB/D54250WYB](http://www.intel.de/content/www/us/en/nuc/nuc-kit-d34010wykh-board-d34010wyb.html)
-  * 3th Gen Intel NUC (Atom): [DE3815TYBE](http://www.intel.de/content/www/us/en/nuc/nuc-kit-de3815tykhe-board-de3815tybe.html)
-  * 2th Gen Intel NUC (Ivy Bridge): [D33217GK](http://www.intel.com/content/www/us/en/support/boards-and-kits/intel-nuc-boards/intel-nuc-board-d33217gk.html)
-  * 1st Gen Intel NUC (Sandy Bridge): [DCP847SKE](http://www.intel.de/content/www/us/en/nuc/nuc-kit-dccp847dye-board-dcp847ske.html)
-2. A PXE+TFTP+DHCP based server environment to host the final PXE image for the bootable ThinClient.
-3. A server-based desktop environment to connect to (e.g. Linux via ThinLinc, Windows via RDP, etc.).
-
-## :cloud: Installation
-The installation of thinRoot is quite straight forward as it is delivered as a full PXE bootable system image that can be directly booted using a PXE+TFTP+DHCP environment:
-
-1. [Download latest release](https://github.com/jens-maus/thinRoot/releases) archive for the hardware platform you are using:
-2. Unarchive tar.bz2 file resulting in a 'bzImage' file to be bootable via a standard PXE environment.
-
-## :yum: How to contribute
-As the thinRoot project is an open source based project everyone is invited to contribute to this project. So, if you are a talented developer and want to contribute to the success of thinRoot feel free to send over pull requests or report issues / enhancement requests. Please note, however, the licensing and contributing implications and accept that - in short - anything you contribute to this repository/project (especially source code) will be (re)licensed under the Apache 2.0 license (see [CONTRIBUTING.md](CONTRIBUTING.md)). In addition, please understand that we will only accept contributions (either source code or issues in the issue tracker) if these comply to our [CODE OF CONDUCT](CODE_OF_CONDUCT.md).
-
-### :moneybag: Donations [![Donate](https://img.shields.io/badge/donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RAQSDY9YNZVCL)
-Even for those that don't have the technical knowhow to help developing on thinRoot there are ways to support our development. Please consider sending us a donation to not only help us to compensate for expenses regarding thinRoot, but also to keep our general development motivation on a high level. So if you want to donate some money please feel free to send us money via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RAQSDY9YNZVCL). And if you are running a business which might integrate thinRoot in one of your products please contact us for a regular donation plan which could not only show that you do care about open source development, but also could secure your product by ensuring that development on thinRoot continues in future.
-
-### :construction: Development
-Building your own thinRoot SD card image is a very straight forward process using this build environment – given that you have sufficient Linux/Unix knowledge and you know what you are actually doing. But if you know what you are doing and which host tools are required to actually be able to run a thinRoot build, it should be as simple as:
-
-```sh
-$ git clone https://github.com/jens-maus/thinRoot
-$ cd thinRoot
-$ make dist
-[wait up to 1h]
-$ cp build-intel_nuc/images/bzImage /tftpboot/thinroot/
+```
+make linux-menuconfig
+make linux-savedefault
 ```
 
-## :scroll: License
-The thinRoot build environment itself – the files found in this git repository – as well as the thinRoot images are licensed under the conditions of the [Apache License 2.0](https://opensource.org/licenses/Apache-2.0). Please note, however, that the buildroot distribution thinRoot is using is licensed under the [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) license instead.
+## changing the buildroot config
 
-## :family: Authors
-See [Contributors](https://github.com/jens-maus/thinRoot/graphs/contributors) for a complete list of people that have directly contributed to this project.
+```
+make menuconfig
+make savedefault
+```
+
+## creating a boot image
+
+```
+make dist
+cp build-intel_nuc/images/bzImage $dest
+```
+
+## build the ipxe bootloader
+
+```
+git clone git@github.com:ipxe/ipxe.git
+cd ipxe/src
+make ipxe.kpxe
+```
+
+or if you want the undi driver
+
+```
+make undionly.kpxe
+```
+
+if you want customize the behavior, have a look at `src/config/general.h`
+and `src/config/console.h`
+
+
+## configure isc dhcp
+
+the following goes into your `/etc/dhcp/dhcpd.conf` 
+
+```
+option space ipxe;
+option ipxe-encap-opts code 175 = encapsulate ipxe;
+option ipxe.priority code 1 = signed integer 8;
+option ipxe.keep-san code 8 = unsigned integer 8;
+option ipxe.skip-san-boot code 9 = unsigned integer 8;
+option ipxe.syslogs code 85 = string;
+option ipxe.cert code 91 = string;
+option ipxe.privkey code 92 = string;
+option ipxe.crosscert code 93 = string;
+option ipxe.no-pxedhcp code 176 = unsigned integer 8;
+option ipxe.bus-id code 177 = string;
+option ipxe.san-filename code 188 = string;
+option ipxe.bios-drive code 189 = unsigned integer 8;
+option ipxe.username code 190 = string;
+option ipxe.password code 191 = string;
+option ipxe.reverse-username code 192 = string;
+option ipxe.reverse-password code 193 = string;
+option ipxe.version code 235 = string;
+option iscsi-initiator-iqn code 203 = string;
+# Feature indicators
+option ipxe.pxeext code 16 = unsigned integer 8;
+option ipxe.iscsi code 17 = unsigned integer 8;
+option ipxe.aoe code 18 = unsigned integer 8;
+option ipxe.http code 19 = unsigned integer 8;
+option ipxe.https code 20 = unsigned integer 8;
+option ipxe.tftp code 21 = unsigned integer 8;
+option ipxe.ftp code 22 = unsigned integer 8;
+option ipxe.dns code 23 = unsigned integer 8;
+option ipxe.bzimage code 24 = unsigned integer 8;
+option ipxe.multiboot code 25 = unsigned integer 8;
+option ipxe.slam code 26 = unsigned integer 8;
+option ipxe.srp code 27 = unsigned integer 8;
+option ipxe.nbi code 32 = unsigned integer 8;
+option ipxe.pxe code 33 = unsigned integer 8;
+option ipxe.elf code 34 = unsigned integer 8;
+option ipxe.comboot code 35 = unsigned integer 8;
+option ipxe.efi code 36 = unsigned integer 8;
+option ipxe.fcoe code 37 = unsigned integer 8;
+option ipxe.vlan code 38 = unsigned integer 8;
+option ipxe.menu code 39 = unsigned integer 8;
+option ipxe.sdi code 40 = unsigned integer 8;
+option ipxe.nfs code 41 = unsigned integer 8;
+
+
+# obviously for your setup different you will have different IPS
+subnet 10.23.107.0 netmask 255.255.255.0 {
+    authoritative;
+    option broadcast-address   10.23.107.255;
+    option routers             10.23.107.1;
+    option domain-name-servers 10.46.101.1;
+    option ntp-servers         ntp.metas.ch;
+    range                    10.23.107.10 10.23.107.250;
+    next-server 10.23.107.1; # the tftp server where ipxe.kpxe is to be found
+    option ipxe.no-pxedhcp 1;
+    # show the hw address in the log
+    log (debug, binary-to-ascii (16, 8, ":", hardware)); 
+    # once we have ipxe loaded we provide it a pointer to the config
+    if exists user-class and option user-class = "iPXE" {
+      log (debug, "Detected iPXE Loader");
+      filename "http://boot-server:3833/ipxe.cfg";
+    # we want to only serve ipxe to certain machines
+    } elsif binary-to-ascii (16, 8, ":", hardware) = "1:fc:aa:14:da:4:d0" # tc1
+        or  binary-to-ascii (16, 8, ":", hardware) = "1:fc:aa:14:da:8:1b" # tc2
+        or  binary-to-ascii (16, 8, ":", hardware) = "1:f8:f:41:4a:72:2e" # tc3
+        or  binary-to-ascii (16, 8, ":", hardware) = "1:94:c6:91:a4:73:5" # tc4
+    {
+      filename "ipxe.kpxe";
+      # filename "undionly.kpxe";
+    } else {
+      filename "pxelinux.0";
+    }
+  }
+}
+
+```
+
+### setup the boot server
+
+for ease of use, I created a little 'boot-server' which provides all the
+files required by thinRoot by using the http protocol it is way faster than
+downloads via tftp.
+
+```
+cd boot-server
+./bootstrap
+./configure --prefix=/opt/thinroot-bootserver
+make install
+```
+
+configure the location for your configuration files in
+`/opt/thinroot-bootserver/etc/boot-server.cfg` there is a `.dist` file for
+inspiration.
+
+In the `boot-server/sample-data` you find some settigs to get you started.
+Notably the `./etc/X11/xorg.conf.d/00-keyboard.conf` file where you can set
+the keyboard configuration.
+
+the `home` folder gets copied into the `truser` acccount and contains the
+default `thinlinc` configuration. The special `trick` of this setup is that
+any changes you make to your thinlinc config will be copied back to the
+boot-server when you exit the thinlinc client which allows easy runtime
+configuration. Each mac address gets a separate config store ... note that
+there is a security issue with this as the boot server just accepts what
+ever mac address the thinclient claims to have ... so best is to NOT run
+this server in an untrusted settig ... in that case it would make sense to
+use ip addresses or even a use supplied login/password to get going.
+
+
+---
+
+tobi oetiker <tobi@oetiekr.ch>
