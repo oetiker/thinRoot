@@ -1,0 +1,4 @@
+{
+  secrets => ['some-secret'],
+  dataRoot => '/var/opt/thinRoot-data',
+}
