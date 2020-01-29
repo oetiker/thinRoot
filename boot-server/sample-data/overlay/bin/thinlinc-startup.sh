@@ -1,7 +1,7 @@
 #!/bin/sh
 cd $HOME
-pkill -f xterm || xterm &
-pkill -f remmina || remmina &
+pkill -0 -f xterm || xterm &
+pkill -0 -f remmina || remmina &
 MAC_ADDR=$(cat /sys/class/net/$(ip route show default | awk '/default/ {print $5}')/address)
 /usr/bin/curl ${BASE_PATH}/home.pkg?mac=${MAC_ADDR} | /bin/tar -zxf -
 /bin/tlclient
