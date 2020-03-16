@@ -8,15 +8,15 @@ Some notes on how to use this thing
 ## changing the kernel config
 
 ```
-make linux-menuconfig
-make linux-savedefault
+make linux-xconfig
+make linux-savedefconfig
 ```
 
 ## changing the buildroot config
 
 ```
-make menuconfig
-make savedefault
+make xconfig
+make savedefconfig
 ```
 
 ## creating a boot image
