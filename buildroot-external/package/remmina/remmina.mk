@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-REMMINA_VERSION = v1.4.1
+REMMINA_VERSION = v1.4.7
 REMMINA_SOURCE = Remmina-$(REMMINA_VERSION).tar.gz
 REMMINA_SITE = https://gitlab.com/Remmina/Remmina/-/archive/$(REMMINA_VERSION)
 REMMINA_LICENSE = GPLv2+ with OpenSSL exception
